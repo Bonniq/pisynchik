@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <stdfix.h>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    setlocale (LC_ALL,"Russian");
+    srand(time(0));
+    long int nx=0, j=0, i=0, n=0;
+    cin >> nx;
+    n=pow(2,nx);
+    bool mas[nx][n];
+    while (i<nx)
+    {
+        while (j<n)
+        {
+            mas[i][j] = 1;
+            j++;
+        }
+        i++;
+    }
+    i=0;
+    while (i<n)
+    {
+        j=0;
+        while (j<nx)
+        {
+            cout << mas[j][i] << " ";
+            j++;
+        }
+        cout << endl;
+        i++;
+    }
+}
